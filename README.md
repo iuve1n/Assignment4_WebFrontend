@@ -1,6 +1,6 @@
 # Assignment 4
 
-This project contains contact forms for the Front-End assignment. Task 0 is a basic form, Task 1 adds HTML5 validation, Task 2 uses Bootstrap styling, and Task 3 shows Bootstrap validation feedback.
+This project contains the forms from the Front-End assignment. Task 0 has a basic contact form. Task 1 adds HTML5 validation. Tasks 2 and 3 use Bootstrap, and Task 4 is a registration form.
 
 ## Technologies
 
