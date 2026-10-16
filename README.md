@@ -7,7 +7,6 @@ This project contains the forms from the Front-End assignment. Task 0 has a basi
 - HTML
 - CSS
 - Bootstrap 5.3
-- JavaScript
 
 ## How to run
 
