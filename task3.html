@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap validation | Assignment 4</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bootstrap-page">
+  <header class="site-header">
+    <nav aria-label="Main navigation">
+      <a class="brand" href="index.html">Assignment 4</a>
+      <div class="nav-links">
+        <a href="index.html">Task 0</a>
+        <a href="task1.html">Task 1</a>
+        <a href="task2.html">Task 2</a>
+        <a aria-current="page" href="task3.html">Task 3</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="form-card">
+      <p class="eyebrow">Part 2 · Bootstrap Forms</p>
+      <h1>Contact form validation</h1>
+      <p class="intro">Submit the form to see Bootstrap validation messages, then correct the fields.</p>
+      <form class="needs-validation" id="contact-form" novalidate>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label" for="name">Name</label>
+            <input class="form-control" id="name" name="name" type="text" required maxlength="50">
+            <div class="invalid-feedback">Name is required.</div>
+            <div class="valid-feedback">Looks good!</div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-control" id="email" name="email" type="email" required maxlength="100">
+            <div class="invalid-feedback">Enter a valid email address.</div>
+            <div class="valid-feedback">Looks good!</div>
+          </div>
+          <div class="col-12">
+            <label class="form-label" for="message">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="5" required maxlength="500"></textarea>
+            <div class="invalid-feedback">Please enter a message.</div>
+            <div class="valid-feedback">Looks good!</div>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">Send message</button>
+          </div>
+        </div>
+      </form>
+      <p class="page-note">The form uses the browser's validity checks and Bootstrap's feedback classes.</p>
+    </section>
+  </main>
+  <script>
+    const form = document.querySelector("#contact-form");
+    const fields = form.querySelectorAll("input, textarea");
+
+    function updateField(field) {
+      field.classList.remove("is-valid", "is-invalid");
+      if (field.checkValidity()) {
+        field.classList.add("is-valid");
+      } else {
+        field.classList.add("is-invalid");
+      }
+    }
+
+    fields.forEach(function (field) {
+      field.addEventListener("input", function () {
+        if (form.classList.contains("was-validated")) {
+          updateField(field);
+        }
+      });
+    });
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      form.classList.add("was-validated");
+      fields.forEach(updateField);
+    });
+  </script>
+</body>
+</html>
