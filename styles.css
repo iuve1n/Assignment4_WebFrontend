@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f8;
+  color: #202832;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #dce1e6;
+}
+
+nav {
+  width: min(900px, calc(100% - 32px));
+  min-height: 62px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  color: #202832;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+}
+
+.nav-links a {
+  color: #465360;
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+  color: #1769aa;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+main {
+  width: min(900px, calc(100% - 32px));
+  margin: 48px auto;
+}
+
+.form-card {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 32px;
+  background: #fff;
+  border: 1px solid #e0e4e8;
+  border-radius: 8px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #596a78;
+  font-size: 13px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.intro {
+  margin: 8px 0 24px;
+  color: #59636d;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #b9c2ca;
+  border-radius: 4px;
+  background: #fff;
+  color: #202832;
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #8bbce4;
+  outline-offset: 1px;
+  border-color: #1769aa;
+}
+
+button {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 4px;
+  background: #1769aa;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #125789;
+}
+
+.page-note {
+  margin: 20px 0 0;
+  color: #59636d;
+  font-size: 14px;
+}
+
+@media (max-width: 520px) {
+  nav {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12px 0;
+  }
+
+  main {
+    margin: 24px auto;
+  }
+
+  .form-card {
+    padding: 22px;
+  }
+}
